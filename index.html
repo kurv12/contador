@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Contador de Cliques</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        font-size: 1em;
+      }
+
+      .description {
+        margin: 0 auto;
+        overflow: hidden;
+        background: lightgray;
+        padding: 30px;
+        text-align: center;
+      }
+
+      body {
+        background: #e7e7e7;
+        text-align: center;
+        text-size-adjust: auto;
+      }
+
+      h2 {
+        font-size: 45px;
+      }
+
+      .btn {
+        font-size: xxx-large;
+        margin-top: 5px;
+      }
+
+      #counter {
+        margin-top: 5px;
+      }
+
+      @media screen and (max-width: 700px) {
+        .sidebar,
+        .content-inner,
+        .content {
+          float: none;
+          width: 100%;
+          margin-right: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main">
+      <div class="description">
+        <p>
+          PRÉ-CASE DINÂMICA TI: Desenvolver um contador de cliques usando HTML,
+          CSS e Javascript (uso de frameworks fica a seu critério), os únicos
+          requisitos obrigatórios são: um botão e um texto informando quantos
+          cliques foram dados nesse botão.
+        </p>
+      </div>
+      <div class="clique">
+        <br style="clear: both" />
+        <h2 class="">Vamos contar seus cliques, capriche!</h2>
+        <p id="counter"></p>
+        <button
+          class="btn w3-btn w3-lightgray w3-border w3-border-green w3-round-large"
+          onclick="contador()"
+        >
+          Clique aqui
+        </button>
+      </div>
+    </div>
+
+    <script>
+      var count = 1;
+      function contador() {
+        document.getElementById("counter").innerHTML = "Clique " + count;
+        count = count + 1;
+      }
+    </script>
+  </body>
+</html>
